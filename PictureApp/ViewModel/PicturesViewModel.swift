@@ -9,6 +9,7 @@ import Foundation
 
 class PictureViewModel: ObservableObject {
     @Published var pictures: [Picture] = []
+    @Published var status: Status = Status(process: .preparing, description: "")
 
     init() { loadData() }
 
@@ -17,17 +18,23 @@ class PictureViewModel: ObservableObject {
         
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { (data, _, error) in
-            guard let data = data else { return }
+            guard let data = data else {
+                self.status.process = .error
+                self.status.description = "Произошла ошибка, повторите запрос позже"
+                return
+            }
 
             do {
                 let json = try JSONDecoder().decode([Picture].self, from: data)
                 for photo in json {
+                    self.status.process = .success
                     DispatchQueue.main.async {
                         self.pictures.append(photo)
                     }
                 }
             } catch {
-                print(error.localizedDescription)
+                self.status.process = .error
+                self.status.description = error.localizedDescription
             }
         }.resume()
     }

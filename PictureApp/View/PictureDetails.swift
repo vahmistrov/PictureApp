@@ -19,8 +19,7 @@ struct PictureDetails: View {
             if let image = url {
                 KFImage(image)
                     .placeholder{
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle())
+                        LoadingView(title: "Loading...")
                     }
                     .fade(duration: 0.25)
                     .resizable()

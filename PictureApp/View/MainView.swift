@@ -14,11 +14,20 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
-            PicturesFeed(
-                page: $page,
-                pictures: model.pictures,
-                loadData: { model.loadData(page: page) }
-            )
+            VStack(alignment: .center) {
+                switch model.status.process {
+                case .error:
+                    ErrorView(title: model.status.description)
+                case .success:
+                    PicturesFeed(
+                        page: $page,
+                        pictures: model.pictures,
+                        loadData: { model.loadData(page: page) }
+                    )
+                case .preparing:
+                    LoadingView(title: "Загружаем данные")
+                }
+            }
             .navigationTitle("Unsplash Pictures")
         }
     }
@@ -39,8 +48,7 @@ private struct PicturesFeed: View {
                     NavigationLink(destination: PictureDetails(url: URL(string: picture.links.full))) {
                         KFImage(URL(string: picture.links.thumb))
                             .placeholder{
-                                ProgressView()
-                                    .progressViewStyle(CircularProgressViewStyle())
+                                LoadingView(title: "Loading...")
                             }
                             .fade(duration: 0.25)
                             .resizable()
