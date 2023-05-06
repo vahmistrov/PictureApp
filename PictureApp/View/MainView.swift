@@ -34,7 +34,7 @@ private struct PicturesFeed: View {
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns) {
+            LazyVGrid(columns: columns, spacing: 0) {
                 ForEach(pictures) { picture in
                     NavigationLink(destination: PictureDetails(url: URL(string: picture.links.full))) {
                         KFImage(URL(string: picture.links.thumb))
@@ -45,7 +45,7 @@ private struct PicturesFeed: View {
                             .fade(duration: 0.25)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(minWidth: 150, minHeight: 150)
+                            .frame(minWidth: UIScreen.main.bounds.size.width / 2.05)
                             .cornerRadius(14)
                             .onAppear {
                                 if pictures.last == picture {
@@ -55,7 +55,7 @@ private struct PicturesFeed: View {
                             }
                     }
                 }
-                .padding(15)
+                .padding(2)
             }
         }
     }

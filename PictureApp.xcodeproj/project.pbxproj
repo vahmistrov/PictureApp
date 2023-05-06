@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D87224742A0671BB00351888 /* PicturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87224732A0671BB00351888 /* PicturesApp.swift */; };
-		D87224762A0671BB00351888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87224752A0671BB00351888 /* ContentView.swift */; };
 		D87224782A0671BC00351888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D87224772A0671BC00351888 /* Assets.xcassets */; };
 		D872247B2A0671BC00351888 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D872247A2A0671BC00351888 /* Preview Assets.xcassets */; };
 		D87224A12A067BFA00351888 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87224A02A067BFA00351888 /* PictureModel.swift */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		D87224702A0671BB00351888 /* PictureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D87224732A0671BB00351888 /* PicturesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesApp.swift; sourceTree = "<group>"; };
-		D87224752A0671BB00351888 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D87224772A0671BC00351888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D872247A2A0671BC00351888 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D87224A02A067BFA00351888 /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				D872249D2A067A8500351888 /* Model */,
 				D872249C2A067A6D00351888 /* View */,
 				D872249B2A0679CF00351888 /* App */,
-				D87224752A0671BB00351888 /* ContentView.swift */,
 				D87224792A0671BC00351888 /* Preview Content */,
 			);
 			path = PictureApp;
@@ -205,7 +202,6 @@
 				D87224A32A067E5100351888 /* PicturesViewModel.swift in Sources */,
 				D87224AD2A06822700351888 /* PictureDetails.swift in Sources */,
 				D87224A52A067F7000351888 /* Constant.swift in Sources */,
-				D87224762A0671BB00351888 /* ContentView.swift in Sources */,
 				D87224742A0671BB00351888 /* PicturesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
