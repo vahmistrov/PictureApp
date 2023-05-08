@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=100&size=35&duration=3000&pause=10&color=fafef6&width=435&lines=PictureApp)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=100&size=35&duration=3000&pause=10&color=72f2ff&width=435&lines=PictureApp)](https://git.io/typing-svg)
 
 Pet-проект.
 
@@ -17,6 +17,8 @@ Pet-проект.
  - Изображение можно увеличивать жестами.
  
  - Из экрана просмотра изображения можно вернуться в экран списка нажатием кнопки "Назад".
+ 
+ ![PictureApp](https://user-images.githubusercontent.com/132203723/236931973-bb430042-13ad-4e63-9429-eb0a8f2cdb54.gif)
  
  ## Планируемые доработки
  
